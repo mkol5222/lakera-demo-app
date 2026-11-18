@@ -2,6 +2,13 @@
 
 All notable changes to **Lakera Guard Demo**. The newest version is always on the [latest release](../../releases/latest) page; update with the [one-line installer](README.md#quick-start-one-command).
 
+## [0.1.2] - 2026-11-18
+
+### Added
+- **Windows support**: Windows 10/11 x64 build (`Lakera-Guard-Demo_windows-x64-setup.exe`). The installer is per-user, so no admin rights are needed.
+- **One-line install and upgrade on Windows**: `irm https://raw.githubusercontent.com/mkol5222/lakera-demo-app/main/install.ps1 | iex`. It downloads the latest release, verifies its SHA-256 checksum, installs silently and starts the app.
+- On Windows, API keys are stored in **Windows Credential Manager**. The Settings screen names the credential store your platform uses.
+
 ## [0.1.1] - 2026-11-18
 
 ### Added
@@ -22,5 +29,6 @@ First release.
 - **Settings**: Lakera API key and optional Hugging Face token stored in the macOS Keychain. Configurable endpoint, project ID, concurrency and timeout.
 - Universal macOS build (Apple Silicon and Intel) and a one-line `curl | bash` installer with SHA-256 verification.
 
+[0.1.2]: ../../releases/tag/v0.1.2
 [0.1.1]: ../../releases/tag/v0.1.1
 [0.1.0]: ../../releases/tag/v0.1.0
