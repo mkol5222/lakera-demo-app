@@ -81,6 +81,8 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1
 
 ## First run
 
+A setup wizard opens on first start: paste your Lakera Guard API key, and it downloads the small *ChatGPT-Jailbreak-Prompts* dataset for you. You can reopen it later from **Settings → Run setup wizard**. To do it by hand:
+
 1. **Settings** → paste your **Lakera Guard API key** → **Save** (it goes to the Keychain or Credential Manager). Optionally set a **Project ID** to use a specific Guard policy, then click **Test Guard connection**.
 2. **Datasets** → download a small one to start, e.g. *ChatGPT-Jailbreak-Prompts* (79 prompts) or *Vigil* (104).
 3. **Prompt Roulette** → **SPIN**, then **TRY MORE**.
@@ -92,7 +94,9 @@ Tips:
 
 ## Updating
 
-Run the same one-line installer again (`curl … | bash` on macOS, `irm … | iex` on Windows). It replaces the app with the latest release and keeps your settings, keys and datasets. See [CHANGELOG.md](CHANGELOG.md) for what's new.
+From version **0.1.3** the app updates itself. On startup it checks GitHub Releases and, if a newer version exists, shows what's new and offers **Update & restart**. Updates are signature-verified before they are installed. You can also click **Check for updates** at the top of **Settings**, or turn off the startup check in **Settings → General**. **Settings → Changelog** shows what's new in each version.
+
+You can always run the same one-line installer again instead (`curl … | bash` on macOS, `irm … | iex` on Windows); versions 0.1.2 and older need this once. Settings, keys and datasets are kept. See [CHANGELOG.md](CHANGELOG.md) for what's new.
 
 ## Uninstall
 

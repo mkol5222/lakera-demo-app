@@ -2,6 +2,17 @@
 
 All notable changes to **Lakera Guard Demo**. The newest version is always on the [latest release](../../releases/latest) page; update with the [one-line installer](README.md#quick-start-one-command).
 
+## [0.1.3] - 2026-11-18
+
+### Added
+- **Automatic updates** on macOS and Windows: on startup the app checks GitHub Releases for a newer version, shows what's new, and offers **Update & restart**, **Later** or **Skip this version**. Updates are downloaded over HTTPS and installed only if their signature verifies against the key built into the app.
+- **Check for updates** button with the installed version at the top of **Settings**, plus a toggle for the startup check.
+- **Changelog** tab in **Settings**: what's new in every version, with the installed version highlighted. It is bundled with the app, so it works offline.
+- **First-run setup wizard**: asks for the Lakera Guard API key (and optional project ID), tests the connection, and downloads the small **ChatGPT-Jailbreak-Prompts** dataset automatically, so Prompt Roulette works right away.
+
+### Note
+- Versions 0.1.2 and older can't update themselves. Upgrade once with the one-line installer; after that, updates arrive in the app.
+
 ## [0.1.2] - 2026-11-18
 
 ### Added
@@ -29,6 +40,7 @@ First release.
 - **Settings**: Lakera API key and optional Hugging Face token stored in the macOS Keychain. Configurable endpoint, project ID, concurrency and timeout.
 - Universal macOS build (Apple Silicon and Intel) and a one-line `curl | bash` installer with SHA-256 verification.
 
+[0.1.3]: ../../releases/tag/v0.1.3
 [0.1.2]: ../../releases/tag/v0.1.2
 [0.1.1]: ../../releases/tag/v0.1.1
 [0.1.0]: ../../releases/tag/v0.1.0
