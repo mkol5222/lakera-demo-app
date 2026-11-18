@@ -1,5 +1,7 @@
 # Lakera Guard Demo
 
+[![Latest release](https://img.shields.io/github/v/release/mkol5222/lakera-demo-app?label=download)](../../releases/latest) · [Changelog](CHANGELOG.md)
+
 A ready-to-run **macOS app** for demoing **Lakera Guard (AI Guardrails)** with real-world jailbreak, prompt-injection and benign prompts.
 
 ![Prompt Roulette](docs/roulette.png)
@@ -11,12 +13,14 @@ A ready-to-run **macOS app** for demoing **Lakera Guard (AI Guardrails)** with r
 | 🎲 **Prompt Roulette** | Picks a random prompt from the downloaded datasets, screens it live with Lakera Guard, and shows **BLOCKED / ALLOWED**, the detectors that fired, the latency, and whether Guard got it right. Hit **TRY MORE** for the next one. |
 | 📚 **Datasets** | One-click download of the public evaluation datasets [recommended by Lakera](https://docs.lakera.ai/docs/datasets) from Hugging Face: Salad-Data, ALERT, Vigil, ChatGPT-Jailbreak-Prompts, ToxicQAFinal and SQuAD 2.0 (benign, for false-positive checks). |
 | ▶️ **Replay** | Batch-replays a dataset (first N rows or a random sample) to the [Guard API](https://docs.lakera.ai/docs/api/screening-roles), with live detection rate or false-positive rate, latency and per-detector counts. |
-| 🧪 **Playground** | Screen any prompt you type. |
+| 🧪 **Playground** | Screen any prompt you type and see the verdict, a per-detector confidence breakdown and, optionally, the raw API request and response. |
 | 🔐 **Settings** | Your Lakera API key (and optional Hugging Face token) is stored in the **macOS Keychain**, never in a file. You can also set the endpoint, project ID (policy) and concurrency. |
 
 ![Datasets](docs/datasets.png)
 
 ![Replay](docs/replay.png)
+
+![Playground](docs/playground.png)
 
 <sub>The screenshots show the UI with prompts from the real datasets and sample Guard verdicts.</sub>
 
@@ -58,6 +62,10 @@ Tips:
 - Download *SQuAD 2.0* as well, so the roulette mixes in benign prompts and you can show there are no false positives.
 - *ToxicQAFinal* is a content-moderation dataset. It is only flagged if your Guard project policy enables moderation detectors.
 - Datasets are stored in `~/Library/Application Support/com.checkpoint.lakera-demo/datasets/`.
+
+## Updating
+
+Run the one-line installer again; it replaces the app with the latest release and keeps your settings, keys and datasets. See [CHANGELOG.md](CHANGELOG.md) for what's new.
 
 ## Uninstall
 
